@@ -23,6 +23,7 @@ int main(int argc, char * argv[]){
 	swapBuffer(buffer,bytes-1);
 	write(1,buffer,bytes);
 	}else{
-	}write(1,"Se ingreso mas de 15 caracteres",32);
+	write(1,"Se ingreso mas de 15 caracteres",32);
+	}
 	return 0;
 }
