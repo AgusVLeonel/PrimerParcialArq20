@@ -8,9 +8,9 @@ extern int write(int fd, char * buff,unsigned int bytes);
 void swapBuffer(char* buffer,int bytes){
 	int i;
 	char aux;
-	for(i=0;i<bytes/2;i++){
-		buffer[i]=aux;
-		buffer[bytes-i]=buffer[i];
+	for(i=0;i<=bytes/2;i++){
+		aux=buffer[i];
+		buffer[i]=buffer[bytes-i];
 		buffer[bytes-i]=aux;
 	}
 }
@@ -20,7 +20,7 @@ int main(int argc, char * argv[]){
 	int bytes;
 	bytes=read(0,buffer,SIZE);
 	printf("%d\n",bytes );
-	swapBuffer(buffer,bytes-1);
+	swapBuffer(buffer,bytes-2);
 	write(1,buffer,bytes);
 	return 0;
 }
